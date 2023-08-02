@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+24
+{% block beforeContent %}
+  {% include "includes/before-content.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <form class="form" action="04-confirm-company" method="post">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      Which company are you uploading files for?
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    Provide the full name or company number.
+  </div>
+  <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+</div>
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+{% endblock %}

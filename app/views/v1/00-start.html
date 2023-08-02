@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+
+
+
+      
+        <p>Upload package accounts to Companies House 
+Use this service to file your iXBRL package accounts to Companies House. These must be packaged using a zip file format. 
+ 
+In this service, you can upload the following package accounts:</p>
+<ul class="govuk-list govuk-list--bullet">
+        <li>UKSEF </li>
+        <li>Welsh/English  </li>
+        <li>Community Interest Company </li>
+        <li>Overseas </li>
+        <li>Audit Exempt Subsidiary  </li>
+        <li>Filing Exempt Subsidiary  </li>
+        <li>Limited Partnership </li>
+        <li>Group Package (s400/s401) </li>
+
+
+
+      </ul>
+
+      <p>Please read the Technical Interface Specification on how to structure your package accounts into a zip file: Hyperlink to TIS.  
+You can find details of all available taxonomies and guidance for filers and developers on the <a href="#">Financial Reporting Council (FRC) website. <a href="#">
+
+ </p>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "01-sign-in",
+        isStartButton: true
+      }) }}
+
+     
+
+{% endblock %}

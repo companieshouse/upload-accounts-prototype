@@ -1,0 +1,323 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+24
+{% block beforeContent %}
+  {% include "includes/before-content.html" %}
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>
+  XBRL Company Accounts Validator
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="//d18wklj4hyyctz.cloudfront.net/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="//d18wklj4hyyctz.cloudfront.net/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="//d18wklj4hyyctz.cloudfront.net/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="//d18wklj4hyyctz.cloudfront.net/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="//d18wklj4hyyctz.cloudfront.net/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="//d18wklj4hyyctz.cloudfront.net/images/govuk-apple-touch-icon.png">
+    
+
+    
+    <!--[if !IE 8]><!-->
+    <link href="//d18wklj4hyyctz.cloudfront.net/stylesheets/govuk-frontend/v3.11.0/govuk-frontend-3.11.0.min.css" rel="stylesheet"/>
+    <!--<![endif]-->
+
+    <style>
+        * {
+            font-family: Arial, sans-serif !important;
+        }
+    </style>
+
+    
+    
+    <!--[if IE 8]>
+  <link href="//d18wklj4hyyctz.cloudfront.net/stylesheets/govuk-frontend/v3.11.0/govuk-frontend-ie8-3.11.0.min.css" rel="stylesheet" />
+  <![endif]-->
+
+    <link href="//d18wklj4hyyctz.cloudfront.net/stylesheets/services/account-validator-web/app.css" rel="stylesheet"/>
+    
+
+    
+    
+    <meta property="og:image" content="//d18wklj4hyyctz.cloudfront.net/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+    <div id="cookie-banner" class="govuk-cookie-banner" role="region" aria-label="Cookies on Companies House services" hidden>
+    <div id="accept-or-reject-message" class="govuk-cookie-banner__message govuk-width-container" hidden>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on Companies House services</h2>
+                <div class="govuk-cookie-banner__content">
+                    <p>We use some essential cookies to make our services work.</p>
+                    <p>We'd also like to use analytics cookies so we can understand how you use our services and to make improvements.</p>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-button-group">
+            <button id="accept-cookies-button" type="button" class="govuk-button" data-module="govuk-button">
+      Accept analytics cookies
+    </button>
+            <button id="reject-cookies-button" type="button" class="govuk-button" data-module="govuk-button">
+      Reject analytics cookies
+    </button>
+            <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/help/cookies">View cookies</a>
+        </div>
+    </div>
+    <div id="accepted-cookies-message" class="govuk-cookie-banner__message govuk-width-container" role="alert" hidden>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-cookie-banner__content">
+                    <p>You've accepted analytics cookies. You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/help/cookies">change your cookie settings</a> at any time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-button-group">
+            <button id="hide-accepted-message-button" class="govuk-button" data-module="govuk-button">
+      Hide this message
+    </button>
+        </div>
+    </div>
+    <div id="rejected-cookies-message" class="govuk-cookie-banner__message govuk-width-container" role="alert" hidden>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-cookie-banner__content">
+                    <p>You've rejected analytics cookies. You can <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/help/cookies">change your cookie settings</a> at any time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-button-group">
+            <button id="hide-rejected-message-button" class="govuk-button" data-module="govuk-button">
+      Hide this message
+    </button>
+        </div>
+    </div>
+</div>
+<noscript>
+    <div class="govuk-cookie-banner" role="region" aria-label="Cookies on Companies House services">
+        <div class="govuk-cookie-banner__message govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on Companies House services</h2>
+                    <div class="govuk-cookie-banner__content">
+                        <p class="govuk-body">We use cookies to make our services work and collect analytics information. To accept or reject analytics cookies, turn on JavaScript in your browser settings and reload this page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</noscript>
+
+
+    
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+    
+
+    
+    
+        
+        
+      </a>
+    </div>
+    
+  </div>
+</header>
+
+
+
+    
+      <div class="govuk-width-container ">
+
+
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing govuk-body" id="main-content" role="main">
+          
+    <div id="submit" class="govuk-grid-row" aria-hidden="false">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">
+                Upload your accounts file
+            </h1>
+
+            
+    
+
+
+            <form method="POST" enctype="multipart/form-data" action="/xbrl_validate/submit">
+                
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="file">
+    Upload your accounts file, then select continue.
+  </label>
+
+
+  <input class="govuk-file-upload" id="file" name="file" type="file">
+</div>
+
+
+                <p class="govuk-body">The validation process may take a few minutes.</p>
+
+                
+
+  
+    
+  
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Validate
+</button>
+
+            </form>
+
+            
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <div id="pending" class="govuk-grid-row govuk-!-display-none" aria-hidden="true">
+        <div class="govuk-width-container gov-container-align-center word-break">
+    <div class="gds-loading-icon-container govuk-!-margin-bottom-8">
+        <div class="sse-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    <h1 class="govuk-heading-l govuk-text-align-centre govuk-!-margin-bottom-2">Validation in progress</h1>
+    <p id="percentage" class="govuk-body govuk-!-margin-bottom-8 govuk-text-align-centre" aria-live="polite">0% complete</p>
+    <p class="govuk-body govuk-text-align-centre">This page will automatically update when the validation is complete.</p>  
+</div>
+    </div>
+
+    <script src="//d18wklj4hyyctz.cloudfront.net/javascripts/app/account-validation-web/file-upload.js"></script>
+    <script>
+        var resultsUrl = "/xbrl_validate/result";
+        var errorUrl = "/xbrl_validate/error";
+        var timeoutMessage = "";
+        var fileInputFieldName = "file";
+
+        //@ts-ignore
+        setupForm({resultsUrl, errorUrl, timeoutMessage, fileInputFieldName});
+    </script>
+
+        </main>
+      </div>
+    
+
+    
+    <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          
+            <ul class="govuk-footer__inline-list">
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="http://resources.companieshouse.gov.uk/legal/termsAndConditions.shtml">
+                    Policies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://find-and-update.company-information.service.gov.uk/help/cookies">
+                    Cookies
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://www.gov.uk/government/organisations/companies-house#org-contacts">
+                    Contact us
+                  </a>
+                </li>
+              
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://developer.companieshouse.gov.uk/">
+                    Developers
+                  </a>
+                </li>
+              
+            </ul>
+          
+          
+        
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    
+    <script src="//d18wklj4hyyctz.cloudfront.net/javascripts/govuk-frontend/v3.11.0/govuk-frontend-3.11.0.min.js"></script>
+    <script>
+        window
+            .GOVUKFrontend
+            .initAll()
+    </script>
+    
+
+  </body>
+</html>
+
+
+
+
+{% endblock %}

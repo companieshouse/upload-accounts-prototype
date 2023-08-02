@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+24
+{% block beforeContent %}
+  {% include "includes/before-content.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+  
+  <h1 class="govuk-label-wrapper">
+  
+    <label class="govuk-label govuk-label--l" for="event-name">
+     Company Authentication
+    </label>
+    <p> To file company information you will need an authentication code. </p>
+    <p> Authenticating for
+  </h1>
+  <h1 class="govuk-heading-m">A COMPANY LIMITED 000000</h1>
+
+  <h1 class="govuk-heading-s">Authentication code</h1>
+
+
+
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+  <form class="form" action="06-choose-your-package-accounts" method="post">
+</div>
+<button class="govuk-button" data-module="govuk-button">
+  Authenticate
+</button>
+
+<div>
+<a href="06-choose-your-packag-accounts" class="govuk-link govuk-link--no-visited-state">Request and authenitcation code (opens in new tab)</a>
+</div>
+
+{% endblock %}
