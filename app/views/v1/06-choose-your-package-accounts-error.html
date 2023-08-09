@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Choose Your Package Accounts – {{ serviceName }} – GOV.UK Prototype Kit
+Error: Choose your package accounts– {{ serviceName }} – GOV.UK 
 {% endblock %}
 
 24
@@ -13,8 +13,6 @@ Choose Your Package Accounts – {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-     <form class="form" action="07a-upload-accounts-in-progress" method="post">
-
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -79,6 +77,7 @@ Choose Your Package Accounts – {{ serviceName }} – GOV.UK Prototype Kit
  
 
       <div class="govuk-button-group govuk-!-padding-top-7">
+        <form class="form" action="07-upload-accounts" method="post">
   <button class="govuk-button" data-module="govuk-button">
     Continue
   </button>
@@ -86,7 +85,6 @@ Choose Your Package Accounts – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
     
   </fieldset>
-  </form>
 </div>
 </div>
 {% endblock %}

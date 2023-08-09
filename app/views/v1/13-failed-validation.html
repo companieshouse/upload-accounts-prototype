@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Failed Validation – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  {% include "includes/before-content.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+  <form class="form" action="10-check-your-answers" method="post"> 
+
+
+<div class="govuk-notification-banner govuk-notification-banner--failure" role="alert"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Failure
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+    Your file is not valid
+    </h3>
+    <p class="govuk-body">Your accounts file 'companies_house_file.xhtml' is not valid because:
+
+<li>XML document structures must start and end within the same entity</li>
+<li> the element type "style" must be terminated by the matching end-tag </li> </p>
+  </div>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+
+</form>
+
+<p class="govuk-body govuk-!-font-size-14 govuk-hint">Jump to <a href="09-successful-validation" class="govuk-link">success</a>.</p>
+
+  </div>
+</div>
+{% endblock %}

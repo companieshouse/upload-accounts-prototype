@@ -1,9 +1,9 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Sucessful Validation – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
-24
+
 {% block beforeContent %}
   {% include "includes/before-content.html" %}
 {% endblock %}
@@ -11,6 +11,10 @@
 {% block content %}
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
+  <form class="form" action="10-check-your-answers" method="post">
+
+
 <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
   aria-labelledby="govuk-notification-banner-title"
   data-module="govuk-notification-banner">
@@ -21,14 +25,25 @@
   </div>
   <div class="govuk-notification-banner__content">
     <h3 class="govuk-notification-banner__heading">
-     Success Your file is valid
+     Your file is valid
     </h3>
-    <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p>
+    <p class="govuk-body">Text here</p>
   </div>
-
-
 </div>
 
-<h3 class="govuk-heading-m">What happens next</h3>
-<p class="govuk-body"> <a href="#" class="govuk-link">Check another XBRL file</a> or close this brower if you've finished checking files.</p>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+
+</form>
+
+<p class="govuk-body govuk-!-font-size-14 govuk-hint">Jump to <a href="13-failed-validation" class="govuk-link">failure</a>.</p>
+
+
+  </div>
+</div>
+
+
 {% endblock %}

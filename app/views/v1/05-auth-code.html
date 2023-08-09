@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Auth Code – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -13,31 +13,31 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group">
-  
-  <h1 class="govuk-label-wrapper">
-  
-    <label class="govuk-label govuk-label--l" for="event-name">
-     Company Authentication
-    </label>
-    <p> To file company information you will need an authentication code. </p>
-    <p> Authenticating for
-  </h1>
-  <h1 class="govuk-heading-m">A COMPANY LIMITED 000000</h1>
+      <h1 class="govuk-heading-xl">Company authentication</h1>
 
-  <h1 class="govuk-heading-s">Authentication code</h1>
+<p>To file company information you will need an authentication code.</p>
+<p>
+Authenticating for<br>
+<strong>	WEST HAM FOOTBALL CLUB LIMITED (00066516) </strong><p>
 
+{{ govukInput({
+  label: {
+    text: "Authentication code",
+    classes: "govuk-label--s",
+    isPageHeading: true
+  },
+  id: "auth-code",
+  name: "auth-code",
+  classes: "govuk-!-width-one-half",
+    type: 'password'
+}) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
+{{ govukButton({
+  text: "Authenticate",
+  href: "06-choose-your-package-accounts"
+}) }}
 
-  <input class="govuk-input" id="event-name" name="event-name" type="text">
-  <form class="form" action="06-choose-your-package-accounts" method="post">
-</div>
-<button class="govuk-button" data-module="govuk-button">
-  Authenticate
-</button>
+<p><a href="javascript:void(0)" class="govuk-link">Request an authentication code</p>
 
-<div>
-<a href="06-choose-your-package-accounts" class="govuk-link govuk-link--no-visited-state">Request an authentication code (opens in new tab)</a>
-</div>
-</div> </div>
 {% endblock %}
