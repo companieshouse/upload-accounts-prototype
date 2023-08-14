@@ -5,24 +5,8 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-  tag: {
-    text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
-
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-
-<ul id="navigation" class="mobile-hidden">
-  <li class="user" id="signed-in-user">
-    {{ data['email'] }}
-  </li>
-  <li>
-    <a href="../signed-out" id="user-signout">Sign out</a>
-  </li>
-</ul>
-<hr class="govuk-section-break govuk-section-break--visible">{% endblock %}
+  {% include "/includes/before-content.html" %}
+{% endblock %}
 
 {% block content %}
 
