@@ -10,10 +10,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
   
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-</div>
 
    <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
 
@@ -65,28 +65,21 @@
     },
         {
       key: {
-        text: "Next accounts made up to"
-      },
-      value: {
-        html: "31 March 2023"
-      }
-    },
-        {
-      key: {
-        text: "Due by "
-      },
-      value: {
-      html: "31 December 2023"      
-      }
-    },
-        {
-      key: {
         text: "Last accounts made up to"
       },
       value: {
       html: "31 March 2022"
       }
+    },
+        {
+      key: {
+        text: "Next accounts due "
+      },
+      value: {
+      html: "31 December 2023"      
+      }
     }
+
   ]
 }) }}
 
@@ -97,5 +90,8 @@
 }) }}  
 
 <p><a href="company-number">Choose a different company</a></p>
+
+</div>
+</div>
 
 {% endblock %}
