@@ -13,51 +13,55 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-                        <!-- <form class="form" action="https://products.payments.service.gov.uk/pay/fd569ca49ba645c2aa1e776f036bfb67" method="post">
+  <!-- <form class="form" action="https://products.payments.service.gov.uk/pay/fd569ca49ba645c2aa1e776f036bfb67" method="post">
 -->
 
         <h1 class="govuk-heading-l">Check your answers </h1>
 
 
+ {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Type of accounts"
+            },
+        value: {
+            text: data['type-of-accounts']
+          },
+            actions: {
+              items: [
+                {
+                  href: "06-choose-your-package-accounts",
+                  text: "Change",
+                  visuallyHiddenText: "type of accounts"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "File uploaded"
+            },
+            value: {
+              text: "afile.zip"
+            },
+            actions: {
+              items: [
+                {
+                  href: "07-upload-accounts",
+                  text: "Change",
+                  visuallyHiddenText: "file uploaded"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
 
 
     
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          
-
-
-  <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Type of accounts
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['type-of-accounts'] }}
-            </dd>
-             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="06-choose-your-package-accounts">
-                Change<span class="govuk-visually-hidden"> file name</span>
-              </a>
-            </dd>
-            </div>
-
-
-
-           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            File uploaded
-            </dt>
-            <dd class="govuk-summary-list__value">
-              afile.zip
-            </dd>
-             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="07-upload-accounts">
-                Change<span class="govuk-visually-hidden"> file name</span>
-              </a>
-            </dd>
-            </div>
-            
- </dl>
-        
+       
         
        
           <a href="https://products.payments.service.gov.uk/pay/fd569ca49ba645c2aa1e776f036bfb67" class="govuk-button" data-module="govuk-button">
