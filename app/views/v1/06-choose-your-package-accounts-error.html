@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Error: Choose your package accounts– {{ serviceName }} – GOV.UK 
+Error: Choose your package accounts – {{ serviceName }} – GOV.UK
 {% endblock %}
 
 24
@@ -13,6 +13,80 @@ Error: Choose your package accounts– {{ serviceName }} – GOV.UK
 {% block content %}
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+     <form class="form" action="07-upload-accounts" method="post">
+
+
+
+
+
+{{ govukRadios({
+  name: "type-of-accounts",
+  fieldset: {
+    legend: {
+      text: "Which type of accounts are you filing?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  
+  items: [
+    {
+      value: "UKSEF",
+      text: "UKSEF"
+    },
+    {
+      value: "Welsh/English",
+      text: "Welsh/English"
+    },
+    {
+      value: "Community Interest Company",
+      text: "Community Interest Company"
+    },
+        {
+      value: "Overseas",
+      text: "Overseas"
+    },
+    {
+      value: "Audit Exempt Subsidiary",
+      text: "Audit Exempt Subsidiary"
+    },
+     {
+      value: "Filing Exempt Subsidiary",
+      text: "Filing Exempt Subsidiary"
+    },
+    {
+      value: "Limited Partnership",
+      text: "Limited Partnership"
+    },
+    {
+      value: "Group Package (s400/s401)",
+      text: "Group Package (s400/s401)"
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -78,15 +152,15 @@ Error: Choose your package accounts– {{ serviceName }} – GOV.UK
       </div>
  
 
-      <div class="govuk-button-group govuk-!-padding-top-7">
-        <form class="form" action="07-upload-accounts" method="post">
+      <div class="govuk-button-group">
   <button class="govuk-button" data-module="govuk-button">
     Continue
   </button>
  
 </div>
     
-  </fieldset>
+  </fieldset>-->
+  </form>
 </div>
 </div>
 {% endblock %}
