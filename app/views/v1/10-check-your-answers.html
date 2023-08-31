@@ -60,11 +60,20 @@
       }) }}
 
 
-    
+
+   {% if data['type-of-accounts'] == 'Community Interest Company' or data['type-of-accounts'] == 'Overseas' %}
+
+        {{ govukButton({
+            text: "Continue to payment"
+          }) }}
+
+       {% else %} 
        
         {{ govukButton({
             text: "Save and continue"
           }) }}
+
+        {% endif %}               
                 
      
        </form>
