@@ -16,7 +16,15 @@ Error: Choose your package accounts – {{ serviceName }} – GOV.UK
      <form class="form" action="07-upload-accounts" method="post">
 
 
-
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Select the type of accounts you are filing",
+      href: "#type-of-accounts"
+    }
+  ]
+}) }}
 
 
 {{ govukRadios({
@@ -59,10 +67,17 @@ Error: Choose your package accounts – {{ serviceName }} – GOV.UK
       text: "Limited Partnership"
     },
     {
-      value: "Group Package (s400/s401)",
-      text: "Group Package (s400/s401)"
+      value: "Group Package Accounts s40 - UK consolidated",
+      text: "Group Package Accounts s400 - UK consolidated"
+    },
+    {
+      value: "Group Package Accounts s401 - Non UK consolidated",
+      text: "Group Package Accounts s401 - Non UK consolidated"
     }
-  ]
+  ],
+    errorMessage: {
+    text: "Select the type of accounts you are filing"
+  }
 }) }}
 
 
