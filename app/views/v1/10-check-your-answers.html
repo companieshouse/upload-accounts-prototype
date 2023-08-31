@@ -13,8 +13,8 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-  <!-- <form class="form" action="https://products.payments.service.gov.uk/pay/fd569ca49ba645c2aa1e776f036bfb67" method="post">
--->
+  <form class="form" action="/10-check-your-answers" method="post">
+
 
         <h1 class="govuk-heading-l">Check your answers </h1>
 
@@ -62,16 +62,12 @@
 
     
        
-        
-       
-          <a href="https://products.payments.service.gov.uk/pay/fd569ca49ba645c2aa1e776f036bfb67" class="govuk-button" data-module="govuk-button">
-
-
-
-
-            Continue to payment
-          </a>
-       <!-- </form>-->
+        {{ govukButton({
+            text: "Save and continue"
+          }) }}
+                
+     
+       </form>
       </div>
     </div>
 
