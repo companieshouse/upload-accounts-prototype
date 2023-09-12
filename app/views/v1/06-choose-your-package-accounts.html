@@ -23,10 +23,13 @@ Choose your package accounts – {{ serviceName }} – GOV.UK
   name: "type-of-accounts",
   fieldset: {
     legend: {
-      text: "What package filing are you submitting?",
+      text: "What accounts package are you submitting?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
+  },
+  hint: {
+    text: "Select one option."
   },
   
   items: [
@@ -36,15 +39,21 @@ Choose your package accounts – {{ serviceName }} – GOV.UK
     },
     {
       value: "Welsh/English",
-      text: "Welsh to English accounts"
+      text: "Welsh accounts with an English translation"
     },
     {
       value: "Community Interest Company",
-      text: "Accounts for a Community Interest Company (CIC)"
+      text: "Accounts for a Community Interest Company (CIC)",
+      hint: {
+        text: "There is a £15 fee to file."
+      }
     },
         {
       value: "Overseas Company",
-      text: "Accounts for an overseas company"
+      text: "Accounts for an overseas company",
+            hint: {
+        text: "There is a £33 fee to file."
+      }
     },
     {
       value: "Audit Exempt Subsidiary",
