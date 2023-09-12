@@ -25,26 +25,27 @@
       
         <p>Use this service to file your iXBRL package accounts with Companies House.</p>
  
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      What package accounts can I file?
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>You can use this service to file:</p>
+    <p>You can file accounts for the following types of company:</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>UKSEF</li>
-      <li>Welsh/English</li>
       <li>Community Interest Company (CIC)</li>
-      <li>overseas</li>
+      <li>overseas company</li>
       <li>audit exempt subsidiary</li>
-      <li>filing exempt subsidiary</li>
+      <li>dormant exempt subsidiary</li>
       <li>limited partnership</li>
-      <li>group package (s400/s401)</li>
       </ul>
-  </div>
-</details>
+
+    <p>You can also file the following types of accounts:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>UKSEF for listed companies </li>
+      <li>group package accounts - section 400, parent incorporated under UK law</li>
+      <li>group package accounts - Section 401, parent incorporated under non UK law</li>
+      <li>Welsh to English</li>
+
+</ul>
+
+<p>You must package your accounts file using a zip file format. <a href=" ">Read the Technical Interface Specification</a> to find out how to structure your package accounts. </p> 
+
 
 <p>You'll need:</p>
 
@@ -52,12 +53,13 @@
       <li>to sign in or create a Companies House account</li>
       <li>the company name or number</li>
       <li>the company authentication code</li>
-      <li>the iXBRL accounts file, packaged using a zip file format</li>
-      <li>any related forms (if relevant)</li>
-      <li>to pay the £XX fee using a credit or debit card</li>
+      <li>required forms, if relevant</li>
+      <li>to pay the fee using a credit or debit card, if relevant</li>
 
       </ul>
 <br>
+
+<p>This service will time out if you do not use it for 60 minutes. Your answers will not be saved.</p> 
 
       {{ govukButton({
         text: "Start now",
@@ -65,16 +67,18 @@
         isStartButton: true
       }) }}
 
-<h2 class="govuk-heading-m">Before you start</h2>
+<h2 class="govuk-heading-m">Filing package accounts</h2>
 
-<p> <a href=" ">Read the Technical Interface Specification</a> to find out how to structure your package accounts in a zip file. </p>
 
-<!-- <p>You can <a href ="https://test-validator.companieshouse.gov.uk/xbrl_validate">use the iXBRL accounts test service to check your accounts are valid</a> and meet the iXBRL specification and business validation rules.</p> -->
+
+<p>You can <a href ="https://test-validator.companieshouse.gov.uk/xbrl_validate">use the iXBRL accounts test service to check your accounts are valid</a> and meet the iXBRL specification and business validation rules.</p> 
 
 
 
       <p>For details of all available taxonomies and guidance for filers and developers, <a href="https://www.frc.org.uk/accountants/frc-taxonomies">see the Financial Reporting Council (FRC) website</a>. 
  </p>
+
+
 
      
 
