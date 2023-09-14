@@ -21,7 +21,7 @@ router.post('/10-check-your-answers', function(request, response) {
 })
 
 
-//This code - courtesy of Vicky Teinaki (UX Lead / Student Loans Company) will show what data is being stored in the Terminal window
+//// Show session data and URLs in the terminal   - courtesy of Vicky Teinaki
 router.use((req, res, next) => {
     const log = {
       method: req.method,
