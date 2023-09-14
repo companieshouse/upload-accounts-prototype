@@ -19,3 +19,16 @@ router.post('/10-check-your-answers', function(request, response) {
         response.redirect("/v1/12-confirmation-submission")
     }
 })
+
+
+//This code - courtesy of Vicky Teinaki (UX Lead / Student Loans Company) will show what data is being stored in the Terminal window
+router.use((req, res, next) => {
+    const log = {
+      method: req.method,
+      url: req.originalUrl,
+      data: req.session.data
+    }
+    console.log(JSON.stringify(log, null, 2))
+
+  next()
+})
