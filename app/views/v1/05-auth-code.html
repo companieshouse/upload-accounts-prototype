@@ -5,30 +5,26 @@
 {% endblock %}
 
 
-{% block beforeContent %}
-  {% include "../includes/before-content.html" %}
-{% endblock %}
+
 
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-   <!--   <h1 class="govuk-heading-xl">Enter the company authentication code</h1> 
+  <h1 class="govuk-heading-xl">Company authentication</h1> 
 
 <p>To file company information you will need an authentication code.</p>
 <p>
 Authenticating for<br>
-<strong>	WEST HAM FOOTBALL CLUB LIMITED (00066516) </strong><p> -->
+<strong>	WEST HAM FOOTBALL CLUB LIMITED (00066516) </strong><p> 
 
 {{ govukInput({
   label: {
-    text: "Enter the company authentication code",
-    classes: "govuk-label--l",
-    isPageHeading: true
+    text: "Authentication code",
+    classes: "govuk-label--s",
+    isPageHeading: false
   },
-  hint: {
-    text: "This is a 6 character code issued by us to each company. You need the code to authorise online filings for WEST HAM FOOTBALL CLUB LIMITED (00066516)."
-  },
+  
   id: "auth-code",
   name: "auth-code",
   classes: "govuk-!-width-one-half",
@@ -36,15 +32,16 @@ Authenticating for<br>
 }) }}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukDetails({
-          summaryText: "I do not have an authentication code",
-          html: "<p>To file online for this company, you’ll need to <a target='blank' href='https://www.gov.uk/guidance/company-authentication-codes-for-online-filing'>request an authentication code (opens in a new tab)</a>.<p>"
-         }) }}
 
 {{ govukButton({
-  text: "Continue",
+  text: "Authenticate",
   href: "06-choose-your-package-accounts"
 }) }}
+
+   <p> <a target='blank' href='https://www.gov.uk/guidance/company-authentication-codes-for-online-filing'>Request an authentication code </a><p>
+       
+
+
 
 </div>
 </div>

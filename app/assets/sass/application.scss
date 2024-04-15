@@ -29,18 +29,17 @@ ul#navigation {
   }
 
 
-  .spinner {
+  .ch-spinner {
     width: 80px;
     height: 80px;
-    margin-bottom: 24px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+    margin: 0 auto 24px;
   }
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+
+  .ch-progress-calculation {
+    font-size: 16px;
+    font-weight: normal;
   }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  .ch-centered {
+    text-align: center;
   }
