@@ -24,7 +24,7 @@ What is the company number? – {{ serviceName }} – GOV.UK
     isPageHeading: true
   },
   hint: {
-    text: "The 8-character reference issued by Companies House when the company was set up"
+    text: "Enter the 8 character company number."
   },
     classes: "govuk-!-width-one-half",
   id: "company-number",
@@ -32,11 +32,13 @@ What is the company number? – {{ serviceName }} – GOV.UK
   value: data['company-number']
 }) }}
 
-
+<div class="govuk-inset-text">
+  If you have a company number that's 7 characters or less, enter zeros at the start so that it's 8 characters in total. For example, if it's 12345, enter 00012345.
+</div>
 
 {{ govukDetails({
-  summaryText: "Help with company number",
-  html: 'Use the <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/">Companies House service</a> to find it.'
+  summaryText: "How do I find the company number?",
+  html: 'You can find this by searching for the company on the <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/">Companies House register (opens in a new tab)</a>.'
 }) }} 
       
 {{ govukButton({
