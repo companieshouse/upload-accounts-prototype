@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+
+
+<p>Use this service to file package accounts with Companies House. </p>
+
+
+
+      <!--Original Version1
+
+      
+        <p>Use this service to file your iXBRL package accounts with Companies House. The accounts must be in a ZIP file format and iXBRL tagged using software.</p>
+
+ 
+<div class="govuk-inset-text">
+<p>You must have your ZIP file prepared and ready to upload. Read <a href="https://www.gov.uk/government/publications/technical-interface-specifications-for-companies-house-software">Companies house technical interface specification (TIS) for accounts</a> to find out how to structure the ZIP file. </p>
+
+
+! from version 2...
+ <p> You must have prepared the package accounts using suitable software. Use our tool if you need to <a href="https://www.gov.uk/software-company-accounts">find software for filing company accounts</a>. 
+  </p>
+
+</div> -->
+
+
+
+
+    <p>You can file package accounts for:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Community Interest Companies (CIC) - there is a £15 fee to file</li>
+      <li>overseas companies - there is a £34 fee to file</li>
+      <li>audit exempt subsidiary accounts</li>
+      <li>dormant exempt subsidiary accounts</li>
+      <li>limited partnership accounts</li>
+      <li>UKSEF accounts for listed companies </li>
+      <li>group package accounts - section 400, parent incorporated under UK law</li>
+      <li>group package accounts - section 401, parent incorporated under non-UK law</li>
+      <li>Welsh accounts with an English translation</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">What you'll need</h2>
+
+<div class="govuk-inset-text">
+  <p> You must use suitable software to prepare package accounts. This will allow you to save the accounts in a ZIP file format, which you'll need for this service. </p>
+  <p></p>Use our tool if you need to <a href="https://www.gov.uk/software-company-accounts">find software for filing company accounts</a>. 
+  </p>
+  </div>
+
+<!--
+<p>You must have your package accounts ZIP file, ready to upload. You must have prepared the package accounts using suitable software. Use our tool if you need to <a href="https://www.gov.uk/software-company-accounts">find software for filing company accounts</a>. 
+</p> -->
+<p>You'll need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the package accounts ZIP file</li>
+      <li>to sign in or create sign in details</li>
+      <li>the company name or number</li>
+      <li>the company authentication code</li>
+
+      <li>to pay the fee using a credit or debit card, if relevant</li>
+
+      </ul>
+<br>
+
+<p>This service will time out if you do not use it for 60 minutes. Your answers will not be saved.</p> 
+
+      {{ govukButton({
+        text: "Start now",
+        href: "00a-tis",
+        isStartButton: true
+      }) }}
+
+<h2 class="govuk-heading-m">Get help to prepare package accounts</h2>
+
+<p>Your software provider should provide you with guidance on preparing package accounts. </p>
+
+<!--<p>
+  You can also search online, or ask your accountant or tax adviser to find out more about the standards the accounts need to meet.
+  </p> -->
+
+      <p>If you’d like more information, you can find details of all available taxonomies and guidance for filers and developers on the <a href="https://www.frc.org.uk/accountants/frc-taxonomies">Financial Reporting Council (FRC) website</a>.</li>
+       <p>You can check if your accounts files are valid using the <a href ="https://test-validator.companieshouse.gov.uk/xbrl_validate">iXBRL accounts test service</a>.</li> 
+        </ul>
+
+
+
+
+
+
+
+     
+
+{% endblock %}

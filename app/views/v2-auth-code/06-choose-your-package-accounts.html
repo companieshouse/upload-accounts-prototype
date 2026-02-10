@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Choose your package accounts – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+24
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+     <form class="form" action="07-upload-accounts" method="post">
+
+
+
+
+
+{{ govukRadios({
+  name: "type-of-accounts",
+  fieldset: {
+    legend: {
+      text: "What package accounts are you submitting?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+
+  
+  items: [
+      {
+      value: "Community Interest Company (CIC) accounts",
+      text: "Community Interest Company (CIC) accounts",
+      hint: {
+        text: "There is a £15 fee to file."
+      }
+    },
+        {
+      value: "Overseas company accounts",
+      text: "Overseas company accounts",
+            hint: {
+        text: "There is a £34 fee to file."
+      }
+    },
+        {
+      value: "Audit exempt subsidiary accounts",
+      text: "Audit exempt subsidiary accounts"
+    },
+     {
+      value: "Dormant exempt subsidiary accounts",
+      text: "Dormant exempt subsidiary accounts"
+    },
+
+            {
+      value: "Limited partnership accounts",
+      text: "Limited partnership accounts"
+    },
+    {
+      value: "UKSEF for a listed company",
+      text: "UKSEF accounts for a listed company"
+    },
+
+
+
+
+
+    {
+      value:"Group Package Accounts - Section 400, parent incorporated under UK law",
+      text: "Group package accounts - section 400, parent incorporated under UK law"
+    },
+    {
+      value: "Group Package Accounts - Section 401, parent incorporated under non UK Law",
+      text: "Group package accounts - section 401, parent incorporated under non UK Law"
+    },
+        {
+      value: "Welsh accounts with an English translation",
+      text: "Welsh accounts with an English translation"
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
+
+
+
+  </form>
+</div>
+</div>
+{% endblock %}
