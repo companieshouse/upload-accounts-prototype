@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   Technical Interface Specification – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Before you file package accounts
+      </h1>
+
+<p>You must have prepared the accounts using suitable software that allows you to save them in a ZIP file format. </p>
+      <!--      <p>You must <a href="https://www.gov.uk/government/publications/technical-interface-specifications-for-companies-house-software ">read the technical interface specification (TIS)</a> to find out:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>how to structure your zip file</li>
+      <li>if you need to include forms in your package accounts</li>
+    </ul> -->
+
+    <h2 class="govuk-heading-m">
+      Confirm you used software to prepare the accounts
+    </h2>
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          I confirm I prepared the accounts using suitable software and have saved them in a ZIP file format.
+        </label>
+      </div>
+      </div>
+
+<br>
+{{ govukButton({
+  text: "Continue",
+   href: "01-sign-in"
+}) }}
+     
+
+</div>
+</div>
+{% endblock %}

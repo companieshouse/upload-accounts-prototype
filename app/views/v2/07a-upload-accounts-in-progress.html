@@ -1,0 +1,42 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Upload accounts in progress – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+{% block content %}
+
+       <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+  
+  
+        <div class="ch-centered">
+        <div class="ch-spinner">
+          <img src="/public/images/loading-spinner.gif" alt="" height="80px">
+        </div>
+              <h1 class="govuk-heading-m">
+          Validation in progress. This can take up to 15 minutes. <br>
+            <span class="ch-progress-calculation">25% complete</span>
+        </h1>
+
+    
+        <p>This page will automatically update when the validation is complete. Do not select to go back or close your browser.</p>
+  
+
+  
+
+</div>  
+<p class="govuk-body govuk-!-font-size-14 govuk-hint"><a href="09-successful-validation">Skip this screen</a></p>
+          
+</div>          
+
+
+
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+  <form class="form" action="/10-check-your-answers" method="post">
+
+
+        <h1 class="govuk-heading-l">Check your answers </h1>
+
+
+ {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Type of accounts"
+            },
+        value: {
+            text: data['type-of-accounts']
+          },
+            actions: {
+              items: [
+                {
+                  href: "06-choose-your-package-accounts",
+                  text: "Change",
+                  visuallyHiddenText: "type of accounts"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "File uploaded"
+            },
+            value: {
+              text: "afile.zip"
+            },
+            actions: {
+              items: [
+                {
+                  href: "07-upload-accounts",
+                  text: "Change",
+                  visuallyHiddenText: "file uploaded"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+
+
+   {% if data['type-of-accounts'] == 'Community Interest Company (CIC) accounts' or data['type-of-accounts'] == 'Overseas company accounts' %}
+
+        {{ govukButton({
+            text: "Continue to payment"
+          }) }}
+
+       {% else %} 
+       
+        {{ govukButton({
+            text: "Submit accounts"
+          }) }}
+
+        {% endif %}               
+                
+     
+       </form>
+      </div>
+    </div>
+
+{% endblock %}

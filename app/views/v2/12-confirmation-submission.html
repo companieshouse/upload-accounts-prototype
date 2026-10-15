@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Accounts submitted – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Package accounts submitted
+          </h1>
+          <div class="govuk-panel__body">
+            Your reference is<br><strong>HDJ2123F</strong>
+          </div>
+        </div>
+
+        <table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Company number</th>
+      <td class="govuk-table__cell">0066516</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Company name</th>
+      <td class="govuk-table__cell">WEST HAM FOOTBALL CLUB LIMITED</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Payment received</th>
+      <td class="govuk-table__cell">£15</td>
+    </tr>
+  </tbody>
+</table>
+ <p>We have sent a confirmation email to <strong>user@companieshouse.gov.uk</strong>.</p>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+We will process your package accounts file. We’ll email you to confirm if it’s accepted.    </p>
+
+<p>If it’s rejected, we’ll email to tell you what to do next. If you paid to file the package accounts, we will refund the fee.  </p>
+
+
+        <h2 class="govuk-heading-m">File more package accounts </h2>
+
+<p><a href="06-choose-your-package-accounts">File more package accounts for WEST HAM FOOTBALL CLUB LIMITED (0066516)</a> </p>
+<p><a href="02-company-search.html">File package accounts for a different company</a></p>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   Technical Interface Specification – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+Did you use software to prepare and save the accounts?            </h1>
+          </legend>
+          <div class="govuk-hint">
+            The accounts must be saved in a ZIP file format. You can only do this using suitable software. 
+          </div>
+                    <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes, I used software and saved the accounts in a ZIP file format.
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No, I did not use software to prepare the accounts.
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+{{ govukButton({
+  text: "Continue",
+   href: "01-sign-in"
+}) }}
+     
+
+</div>
+</div>
+{% endblock %}

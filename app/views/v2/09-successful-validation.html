@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Sucessful validation – {{ serviceName }} – GOV.UK 
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+  <form class="form" action="10-check-your-answers" method="post">
+
+
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+   <!-- <h3 class="govuk-notification-banner__heading">
+     Your file is valid 
+    </h3> -->
+
+   <!-- <p class="govuk-body">You can submit your package accounts file for processing.</p> -->
+
+    <h3 class="govuk-notification-banner__heading">Your package accounts zip file is valid    </h3>
+    <p>Your file “NAME.zip” meets the iXBRL specification. We’ll need to check it meets business validation rules when you submit it. We’ll email you to confirm if it’s rejected or accepted. .</p>
+  </div>
+</div>
+
+
+  <button class="govuk-button" data-module="govuk-button">
+    Submit
+  </button>
+
+
+</form>
+
+<p class="govuk-body govuk-!-font-size-14 govuk-hint">Jump to <a href="13-failed-validation" class="govuk-link">failure</a>.</p>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
