@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Choose your package accounts – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+24
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+     <form class="form" action="11-check-your-answers" method="post">
+
+
+
+
+
+
+      <h1 class="govuk-heading-xl">Accounts have already been submitted for this period </h1>
+
+      <p>There are existing accounts for WEST HAM FOOTBALL CLUB LIMITED (00066516) that cover the same period as the accounts you're trying to submit.</p>
+
+      <p>Select to confirm if you're filing these accounts to correct or amend the accounts that have already been submitted.</p>
+
+
+      <p>If not, you'll need to upload a new or updated accounts file that covers a different accounting period. You'll need to start again to do this.</p>
+
+
+
+{{ govukCheckboxes({
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "Confirm if you want to replace the existing accounts",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Yes",
+      text: "I confirm I want to replace the existing accounts."
+    }
+  ]
+}) }}
+
+
+
+{{ govukButton({
+  text: "Confirm and continue"
+}) }}
+
+
+<p><a href="/v2/00-start">Upload a new or updated accounts file</a>.</p>
+
+
+
+  </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Choose your package accounts – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+24
+{% block beforeContent %}
+  {% include "../includes/before-content.html" %}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+     <form class="form" action="11-check-your-answers" method="post">
+
+
+
+
+
+{{ govukRadios({
+  name: "revised-accounts",
+  fieldset: {
+    legend: {
+      text: "Are you filing these accounts to replace existing ones? ",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: "Select yes if you're filing these accounts to correct or amend accounts that have already been submitted."
+  },
+
+  
+  items: [
+      {
+      value: "Yes",
+      text: "Yes"
+    },
+        {
+      value: "No",
+      text: "No"
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+
+
+
+
+  </form>
+</div>
+</div>
+{% endblock %}
